@@ -1,0 +1,20 @@
+﻿{
+  "Responsible": "string",
+  "Quantity": 0,
+  "QuestionnaireId": "string",
+  "IdentifyingData": [
+    {
+      "Identity": "string",
+      "Variable": "string",
+      "Answer": "string"
+    }
+  ],
+  "Email": "string",
+  "Password": "string",
+  "WebMode": true,
+  "IsAudioRecordingEnabled": true,
+  "Comments": "string",
+  "ProtectedVariables": [
+    "string"
+  ]
+}

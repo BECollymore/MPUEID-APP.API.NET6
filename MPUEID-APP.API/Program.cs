@@ -1,3 +1,4 @@
+using MPUEID_APP.API;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +20,18 @@ builder.Services.AddCors(options =>
         .AllowAnyHeader()
         .AllowAnyOrigin());
 });
+
+IConfiguration configuration = builder.Configuration;
+AppSettings.Configuration = configuration;
+
+//api settings config/dependency injection
+var apiSettings = new ApiSettings();
+//bind to apisettings class for config section ApiSettings
+configuration.GetSection("ApiSettings").Bind(apiSettings);
+builder.Services.AddSingleton(apiSettings);
+//dependency injection
+var connectAPI = new ConnectAPI(apiSettings);
+builder.Services.AddSingleton(connectAPI);
 
 var app = builder.Build();
 
