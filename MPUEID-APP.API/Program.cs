@@ -32,6 +32,7 @@ builder.Services.AddSingleton(apiSettings);
 //dependency injection
 var connectAPI = new ConnectAPI(apiSettings);
 builder.Services.AddSingleton(connectAPI);
+builder.Services.AddHttpClient();
 
 var app = builder.Build();
 

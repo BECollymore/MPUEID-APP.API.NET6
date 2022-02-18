@@ -5,9 +5,9 @@ namespace MPUEID_APP.API.Models
     public partial class AssignmentModel
     { 
         public string Responsible { get; set; } = string.Empty;
-        public int? Quantity { get; set; } = null;
+        public int Quantity { get; set; }
         // public string QuestionnaireId { get; set; } = string.Empty;
-        public IdentifyingData IdentifyingData { get; set; } = new IdentifyingData();   
+        public IdentifyData identifyData { get; set; }   
         public string Email { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;
         public bool WebMode { get; set; } = false;

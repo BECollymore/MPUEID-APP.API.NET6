@@ -2,18 +2,18 @@
 
 namespace MPUEID_APP.API.Models
 {
-    public partial class IdentifyingData
+    public partial class IdentifyData
     {
-        [StringLength(45)]
+        [StringLength(255)]
         public string Address { get; set; } = string.Empty;
 
-        [StringLength(3)]
+        [StringLength(8)]
         public string Pole { get; set; } = string.Empty;
 
         [StringLength(91)]
         public string Directions { get; set; } = string.Empty;
 
-        [StringLength(8)]
+        [StringLength(50)]
         public string Applicant { get; set; } = string.Empty;
 
         [StringLength(14)]
@@ -25,12 +25,13 @@ namespace MPUEID_APP.API.Models
         [StringLength(14)]
         public string AlternateTel { get; set; } = string.Empty;
 
-        [StringLength(14)]
+        [StringLength(30)]
         public string ApplicationNo { get; set; } = string.Empty;
 
-        [StringLength(15)]
+        [StringLength(30)]
         public string Wireman { get; set; } = string.Empty;
-
-        public int InspectionType { get; set; }
+       
+        [StringLength(1)]
+        public string InspectionType { get; set; }
     }
 }
